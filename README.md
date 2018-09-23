@@ -32,3 +32,9 @@ Most of the riders in the afternoon are aged between 28 to 45 and the median age
 
 The age range for the highest occurrences of trips are from users aged between 23-35. This shows that most of the trips are taken by young individuals.
 
+## Cluster Analysis
+
+### Data Normalization
+
+It is important to normalize the data because clustering is sensitive to magnitude, and since the units of all variables are not the same, some variables may get more influence than they should. If the variables in the Hubway dataset are not normalized, duration and age would be the most influential variables when Euclidean or any other distance metric is used to measure the distance between data points since the magnitudes are much higher than the remaining variables which are binary.
+
