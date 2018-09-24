@@ -94,6 +94,13 @@ One way to pick the right number of clusters is to do the elbow method. In the f
 
 ![Figure 10](https://github.com/gaganchane/hubway-clustering/blob/master/images/Figure12.png)
 
+## Comparing Hierarchical and KMeans Clustering
+
+By comparing the results from hierarchical and kmeans clustering, the number of clusters that seemed right for both algorithms were six. Interestingly, in both methods, there is a cluster of 226 data points of all the trips that were taken during the night and all the other variables have the same mean value for this cluster for both methods. In addition, the largest cluster for both methods contain trips taken during the morning on a weekday. Lastly, for both algorithms, there is a cluster (Cluster 3 for hierarchical and Cluster 5 for kmeans) that contains trips that were only taken during the weekend with about 1500 data points in each cluster and similar mean values for the other variables.
+
+The clusters created by both algorithms are fairly similar but the clusters from kmeans will be used to make recommendations to Hubway. This is because in kmeans, aside from cluster 5 (includes weekend trips only) the rest of the clusters have a clear distinction between morning, afternoon, evening, and night trips. In hierarchical, only 4 out of the 6 clusters have a clear distinction between trips during different periods of the day.
+
+
 ## Recommendations For Hubway
 
 From the kmeans clusters, it is evident that most of the trips are taken during the morning and afternoon, and during weekdays. This is probably the result of people using Hubway to commute to and from work. In addition, only 2.3% (226) of the trips are taken during the night which is very small compared to other period of the day. Another insight that can be drawn is that most of the trips are taken by males. Lastly, only 16.7% of the trips are taken during the weekend. The current pricing model is not appropriate because currently, there is barely any revenue generation aside from the membership fee. The largest average duration out of all clusters is 941 seconds (~16 minutes). This means that there is no revenue being generated from overtime fees since it only applies for any trip time surpassing 30 minutes.
